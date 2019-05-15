@@ -1,10 +1,9 @@
 Config = {}
 
-Config.DrawDistance 			  = 100.0
-Config.MarkerType    			  = 1
-Config.MarkerSize   			  = { x = 1.5, y = 1.5, z = 1.0 }
+Config.DrawDistance               = 100.0
+Config.MarkerType                 = 1
+Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 1.0 }
 Config.MarkerColor                = { r = 255, g = 255, b = 255 }
-Config.MarkerDeletersColor        = { r = 255, g = 0, b = 0 }
 
 Config.EnablePlayerManagement     = false
 Config.EnableArmoryManagement     = false
@@ -12,119 +11,139 @@ Config.EnableESXIdentity          = false -- enable if you're using esx_identity
 Config.EnableSocietyOwnedVehicles = false
 Config.EnableLicenses             = false -- enable if you're using esx_license
 
-Config.EnableHandcuffTimer        = true -- enable handcuff timer? will unrestrain player after the time ends
+Config.EnableHandcuffTimer        = true -- enable handcuff timer ? will unrestrain player after the time ends
 Config.HandcuffTimer              = 10 * 60000 -- 10 mins
 
 Config.EnableJobBlip              = true -- enable blips for colleagues, requires esx_society
 Config.EnablePoliceFine           = true -- enable fine, requires esx_policejob
 
 Config.MaxInService               = -1
-Config.Locale                     = 'fr'
+Config.Locale                     = 'fr' -- replace with the agreed language, available in the locales/ folder
 
 Config.FBIStations = {
 
 	FBI = {
 
 		Blip = {
-			Pos     = { x = 112.105, y = -749.363, z = 45.751 },
+			Pos     = vector3(112.1, -749.3, 45.7),
 			Sprite  = 88,
 			Display = 4,
 			Scale   = 0.8,
-			Colour  = 63,
-		},
-
-		-- https://wiki.rage.mp/index.php?title=Weapons
-		AuthorizedWeapons = {
-			{ name = 'WEAPON_NIGHTSTICK',       price = 200 },
-			{ name = 'WEAPON_COMBATPISTOL',     price = 300 },
-			{ name = 'WEAPON_ASSAULTSMG',       price = 1250 },
-			{ name = 'WEAPON_ASSAULTRIFLE',     price = 1500 },
-			{ name = 'WEAPON_PUMPSHOTGUN',      price = 600 },
-			{ name = 'WEAPON_STUNGUN',          price = 500 },
-			{ name = 'WEAPON_FLASHLIGHT',       price = 80 },
-			{ name = 'WEAPON_FIREEXTINGUISHER', price = 120 },
-			{ name = 'WEAPON_FLAREGUN',         price = 60 },
-			{ name = 'WEAPON_STICKYBOMB',       price = 250 },
-			{ name = 'GADGET_PARACHUTE',        price = 300 },
+			Color   = 63
 		},
 
 		Cloakrooms = {
-			{ x = 152.046, y = -736.179, z = 241.151 },
+			vector3(152.0, -736.1, 241.1)
 		},
 
 		Armories = {
-			{ x = 143.654, y = -764.390, z = 241.152 },
+			vector3(143.6, -764.3, 241.1)
 		},
 
 		Vehicles = {
 			{
-				Spawner    = { x = 95.547, y = -723.756, z = 32.133 },
+				Spawner = vector3(95.5, -723.7, 32.1),
+				InsideShop = vector3(95.5, -723.7, 32.1),
 				SpawnPoints = {
-					{ x = 100.145, y = -729.447, z = 32.779, heading = 340.8, radius = 6.0 },
-					{ x = 104.046, y = -730.836, z = 32.779, heading = 340.8, radius = 6.0 },
-					{ x = 107.748, y = -732.138, z = 32.780, heading = 339.2, radius = 6.0 }
+					{ coords = vector3(100.1, -729.4, 32.7), heading = 340.8, radius = 6.0 },
+					{ coords = vector3(104.0, -730.8, 32.7), heading = 340.8, radius = 6.0 },
+					{ coords = vector3(107.7, -732.1, 32.7), heading = 340.8, radius = 6.0 }
 				}
-			},
-		},
-
-		VehicleDeleters = {
-			{ x = 96.359, y = -728.160, z = 32.133 },
-			{ x = 93.267, y = -720.182, z = 32.133 }
+			}
 		},
 
 		BossActions = {
-			{ x = 148.941, y = -758.541, z = 241.151 }
+			vector3(148.9, -758.5, 241.1)
 		},
 
 		Elevator = {
 			{
-				Top = { x = 136.093, y = -761.823, z = 241.152 },
-				Down = { x = 136.093, y = -761.809, z = 44.752 },
-				Parking = { x = 65.447, y = -749.675, z = 30.634 }
+				Top = vector3(136.0, -761.8, 241.1),
+				Down = vector3(136.0, -761.5, 44.7),
+				Parking = vector3(65.4, -749.6, 30.6)
 			}
-		},
+		}
+	}
+}
 
+-- https://wiki.rage.mp/index.php?title=Weapons
+Config.AuthorizedWeapons = {
+	agent = {
+		{ weapon = 'WEAPON_STUNGUN', price = 1000 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 20 }
 	},
 
+	special = {
+		{ weapon = 'WEAPON_STUNGUN', price = 1000 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_SPECIALCARBINE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 12500 },
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 20 }
+	},
+
+	supervisor = {
+		{ weapon = 'WEAPON_STUNGUN', price = 1000 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_SPECIALCARBINE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 12500 },
+		{ weapon = 'WEAPON_SNIPERRIFLE', price = 15000 },
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 20 }
+	},
+
+	assistant = {
+		{ weapon = 'WEAPON_STUNGUN', price = 1000 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_SPECIALCARBINE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 12500 },
+		{ weapon = 'WEAPON_SNIPERRIFLE', price = 15000 },
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 20 },
+		{ weapon = 'WEAPON_GRENADE', price = 8500 }
+	},
+
+	boss = {
+		{ weapon = 'WEAPON_STUNGUN', price = 1000 },
+		{ weapon = 'WEAPON_COMBATPISTOL', components = { 0, 0, 1000, 4000, nil }, price = 5000 },
+		{ weapon = 'WEAPON_SPECIALCARBINE', components = { 0, 6000, 1000, 4000, 8000, nil }, price = 10000 },
+		{ weapon = 'WEAPON_PUMPSHOTGUN', components = { 2000, 6000, nil }, price = 12500 },
+		{ weapon = 'WEAPON_SNIPERRIFLE', price = 15000 },
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 0 },
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 20 },
+		{ weapon = 'WEAPON_GRENADE', price = 8500 },
+		{ weapon = 'WEAPON_STICKYBOMB', price = 10000 }
+	}
 }
 
 -- https://wiki.rage.mp/index.php?title=Vehicles
 Config.AuthorizedVehicles = {
 	Shared = {
-		{
-			model = 'fbi',
-			label = 'Voiture FBI'
-		},
-		{
-			model = 'fbi2',
-			label = 'SUV FBI'
-		}
+		{ model = 'fbi', label = 'FBI Car', price = 3500 },
+		{ model = 'fbi2', label = 'FBI SUV', price = 5000}
 	},
 
-	agent = {
+	agent = {},
 
-	},
-
-	special = {
-
-	},
+	special = {},
 
 	supervisor = {
-
+		{ model = 'pbus', label = 'Prison Bus', price = 6000 }
 	},
 
 	assistant = {
-
+		{ model = 'pbus', label = 'Prison Bus', price = 6000 }
 	},
 
 	boss = {
-
+		{ model = 'pbus', label = 'Prison Bus', price = 6000 }
 	}
 }
 
 -- Look in skinchanger/client/main.lua for more elements.
 Config.Uniforms = {
-
 	agent_wear = {
 		male = {
 			['tshirt_1'] = 130,
