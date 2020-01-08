@@ -5,12 +5,20 @@ This script was created using the [esx_policejob](https://github.com/ESX-Org/esx
 [Click here to read this document in French.](https://github.com/ESX-FRANCE/esx_fbi_job/wiki/README--Fran%C3%A7ais)
 
 ## Requirements
-* [esx_billing](https://github.com/ESX-Org/esx_billing)
-* [esx_society](https://github.com/ESX-Org/esx_society)
-* [esx_datastore](https://github.com/ESX-Org/esx_datastore)
-* [esx_identity](https://github.com/ESX-Org/esx_identity)
-* [esx_license](https://github.com/ESX-Org/esx_license)
-* [esx_service](https://github.com/ESX-Org/esx_service)
+  * [esx_billing](https://github.com/ESX-Org/esx_billing)
+  * [esx_vehicleshop](https://github.com/ESX-Org/esx_vehicleshop)
+  * [esx_addoninventory](https://github.com/ESX-Org/esx_addoninventory)
+  * [esx_datastore](https://github.com/ESX-Org/esx_datastore)
+  * [esx_society](https://github.com/ESX-Org/esx_society)
+
+* ESX Identity Support
+  * [esx_identity](https://github.com/ESX-Org/esx_identity)
+
+* ESX License Support
+  * [esx_license](https://github.com/ESX-Org/esx_license)
+
+* ESX Service Support
+  * [esx_service](https://github.com/ESX-Org/esx_service)
 
 ## Download
 ### Using [fvm-installer](https://github.com/qlaffont/fvm-installer)
@@ -36,7 +44,7 @@ git clone https://github.com/ESX-FRANCE/esx_fbi_job [esx]/esx_fbi_job
 ### License
 esx_fbi_job - fbi script for ESX
 
-Copyright (C) 2018-2019 keketiger
+Copyright (C) 2018-2020 keketiger
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 
