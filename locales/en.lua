@@ -60,7 +60,7 @@ Locales['en'] = {
   -- Service
   ['service_max'] = 'you cannot enter service, max officers in service: %s/%s',
   ['service_not'] = 'you have not entered service! You\'ll have to get changed first.',
-  ['service_anonunce'] = 'service information',
+  ['service_announce'] = 'service information',
   ['service_in'] = 'you\'ve entered service, welcome!',
   ['service_in_announce'] = 'operator ~y~%s~s~ has entered service!',
   ['service_out'] = 'you have left service.',
