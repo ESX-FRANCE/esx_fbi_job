@@ -55,8 +55,8 @@ function OpenCloakroomMenu()
 	ESX.UI.Menu.CloseAll()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'cloakroom', {
-		title    = _U('cloakroom'),
-		align    = 'top-left',
+		title = _U('cloakroom'),
+		align = 'top-left',
 		elements = {
 			{label = _U('citizen_wear'), value = 'citizen_wear'},
 			{label = _U('fbi_wear'), uniform = grade},
@@ -75,7 +75,7 @@ function OpenCloakroomMenu()
 						playerInService = false
 
 						local notification = {
-							title    = _U('service_anonunce'),
+							title    = _U('service_announce'),
 							subject  = '',
 							msg      = _U('service_out_announce', GetPlayerName(PlayerId())),
 							iconType = 1
@@ -106,7 +106,7 @@ function OpenCloakroomMenu()
                                 playerInService = true
 
                                 local notification = {
-                                    title    = _U('service_anonunce'),
+                                    title    = _U('service_announce'),
                                     subject  = '',
                                     msg      = _U('service_in_announce', GetPlayerName(PlayerId())),
                                     iconType = 1
@@ -122,7 +122,7 @@ function OpenCloakroomMenu()
                         playerInService = true
 
 						local notification = {
-							title    = _U('service_anonunce'),
+							title    = _U('service_announce'),
 							subject  = '',
 							msg      = _U('service_in_announce', GetPlayerName(PlayerId())),
 							iconType = 1
@@ -153,8 +153,8 @@ function OpenCloakroomMenu()
 	end, function(data, menu)
 		menu.close()
 
-		CurrentAction     = 'menu_cloakroom'
-		CurrentActionMsg  = _U('open_cloackroom')
+		CurrentAction = 'menu_cloakroom'
+		CurrentActionMsg = _U('open_cloackroom')
 		CurrentActionData = {}
 	end)
 end
@@ -192,8 +192,8 @@ function OpenArmoryMenu(station)
 	end, function(data, menu)
 		menu.close()
 
-		CurrentAction     = 'menu_armory'
-		CurrentActionMsg  = _U('open_armory')
+		CurrentAction = 'menu_armory'
+		CurrentActionMsg = _U('open_armory')
 		CurrentActionData = {station = station}
 	end)
 end
@@ -202,24 +202,24 @@ function OpenFBIActionsMenu()
 	ESX.UI.Menu.CloseAll()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'fbi_actions', {
-		title    = _U('fbi_actions'),
-		align    = 'top-left',
+		title = _U('fbi_actions'),
+		align = 'top-left',
 		elements = {
 			{label = _U('citizen_interaction'),	value = 'citizen_interaction'},
 			{label = _U('vehicle_interaction'),	value = 'vehicle_interaction'},
-			{label = _U('object_spawner'),		value = 'object_spawner'}
+			{label = _U('object_spawner'), value = 'object_spawner'}
 		}
 	}, function(data, menu)
 
 		if data.current.value == 'citizen_interaction' then
 			local elements = {
-				{label = _U('id_card'),			value = 'identity_card'},
-				{label = _U('search'),			value = 'search'},
-				{label = _U('handcuff'),		value = 'handcuff'},
-				{label = _U('drag'),			value = 'drag'},
-				{label = _U('put_in_vehicle'),	value = 'put_in_vehicle'},
+				{label = _U('id_card'), value = 'identity_card'},
+				{label = _U('search'), value = 'search'},
+				{label = _U('handcuff'), value = 'handcuff'},
+				{label = _U('drag'), value = 'drag'},
+				{label = _U('put_in_vehicle'), value = 'put_in_vehicle'},
 				{label = _U('out_the_vehicle'),	value = 'out_the_vehicle'},
-				{label = _U('unpaid_bills'),	value = 'unpaid_bills'}
+				{label = _U('unpaid_bills'), value = 'unpaid_bills'}
 			}
 
 			if Config.EnablePoliceFine then
@@ -231,8 +231,8 @@ function OpenFBIActionsMenu()
 			end
 
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'citizen_interaction', {
-				title    = _U('citizen_interaction'),
-				align    = 'top-left',
+				title = _U('citizen_interaction'),
+				align = 'top-left',
 				elements = elements
 			}, function(data2, menu2)
 				local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
