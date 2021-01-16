@@ -19,6 +19,9 @@ This script was created using the [esx_policejob](https://github.com/ESX-Org/esx
 
 * ESX Service Support
   * [esx_service](https://github.com/ESX-Org/esx_service)
+  
+* ESX Status Support
+  * [esx_status](https://github.com/ESX-Org/esx_status)
 
 ## Download
 ### Using [fvm-installer](https://github.com/qlaffont/fvm-installer)
