@@ -31,8 +31,6 @@ Locales['en'] = {
   ['get_weapon_menu'] = 'armory - Withdraw Weapon',
   ['put_weapon_menu'] = 'armory - Store Weapon',
   -- Vehicles
-  ['vehicle_menu'] = 'vehicle',
-  ['vehicle_blocked'] = 'all available spawn points are currently blocked!',
   ['garage_prompt'] = 'press ~INPUT_CONTEXT~ to access the ~y~Vehicle Actions~s~.',
   ['helicopter_prompt'] = 'press ~INPUT_CONTEXT~ to access the ~y~Helicopter Actions~s~.',
   ['garage_title'] = 'vehicle Actions',
@@ -42,7 +40,7 @@ Locales['en'] = {
   ['garage_has_stored'] = 'the vehicle has been stored in your garage',
   ['garage_has_notstored'] = 'no nearby owned vehicles were found',
   ['garage_notavailable'] = 'your vehicle is not stored in the garage.',
-  ['garage_blocked'] = 'there\'s no available spawn points!',
+  ['garage_blocked'] = 'there\'s no available spawn points !',
   ['garage_empty'] = 'you dont have any vehicles in your garage.',
   ['garage_released'] = 'your vehicle has been released from the garage.',
   ['garage_store_nearby'] = 'there is no nearby vehicles.',
