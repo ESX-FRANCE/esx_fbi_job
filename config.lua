@@ -50,6 +50,16 @@ Config.FBIStations = {
 				}
 			}
 		},
+		
+		Helicopters = {
+			{
+				Spawner = vector3(129.65, -730.22, 262.86),
+				InsideShop = vector3(121.2, -744.3, 262.85),
+				SpawnPoints = {
+					{coords = vector3(121.2, -744.3, 262.85), heading = 340.8, radius = 6.0}
+				}
+			}
+		},
 
 		BossActions = {
 			vector3(148.9, -758.5, 242.1)
@@ -123,6 +133,32 @@ Config.AuthorizedVehicles = {
         },
         assistant = {},
         boss = {}
+    }
+}
+
+Config.AuthorizedHelicopters = {
+    helicopter = {
+        agent = {
+			{model = 'buzzard2', price = 35000}
+        },
+        special = {
+            {model = 'havok', price = 10000},
+			{model = 'buzzard2', price = 35000}
+        },
+        supervisor = {
+            {model = 'buzzard', price = 50000},
+            {model = 'buzzard2', price = 35000}
+        },
+        assistant = {
+			{model = 'swift2', price = 60000},
+			{model = 'buzzard', price = 50000},
+			{model = 'buzzard2', price = 35000}
+		},
+        boss = {
+			{model = 'volatus', price = 70000},
+			{model = 'buzzard', price = 50000},
+			{model = 'buzzard2', price = 35000}
+		}
     }
 }
 

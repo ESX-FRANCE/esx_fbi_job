@@ -31,6 +31,8 @@ Locales['fr'] = {
   ['get_weapon_menu'] = 'armurerie - Retirer arme',
   ['put_weapon_menu'] = 'armurerie - Stocker arme',
   -- Vehicles
+  ['helicopter_prompt'] = 'Appuyez sur la touche ~INPUT_CONTEXT~ pour créer un ~y~hélicoptère..~s~.',
+  ['helicopter_notauthorized'] = 'Vous n\'êtes pas autorisé à acheter des hélicoptères',
   ['vehicle_menu'] = 'véhicule',
   ['vehicle_blocked'] = 'tous les points de spawn sont bloqués!',
   ['garage_prompt'] = 'appuyez sur ~INPUT_CONTEXT~ pour accéder aux ~y~Actions Véhicule~s~.',

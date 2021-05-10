@@ -66,6 +66,7 @@ Locales['en'] = {
   ['service_out'] = 'you have left service.',
   ['service_out_announce'] = 'operator ~y~%s~s~ has left their service.',
   -- Action Menu
+  ['fbi_actions'] = 'FBI',
   ['citizen_interaction'] = 'citizen Interaction',
   ['vehicle_interaction'] = 'vehicle Interaction',
   ['object_spawner'] = 'object Spawner',
