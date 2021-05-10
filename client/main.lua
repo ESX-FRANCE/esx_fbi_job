@@ -969,7 +969,7 @@ AddEventHandler('esx_fbi_job:hasEnteredMarker', function(station, part, partNum)
 		CurrentActionMsg  = _U('garage_prompt')
 		CurrentActionData = {station = station, part = part, partNum = partNum}
 	elseif part == 'Helicopters' then
-		CurrentAction     = 'Helicopters'
+		CurrentAction     = 'menu_helicopter_spawner'
 		CurrentActionMsg  = _U('helicopter_prompt')
 		CurrentActionData = {station = station, part = part, partNum = partNum}
 	elseif part == 'BossActions' then
@@ -1286,12 +1286,12 @@ Citizen.CreateThread(function()
 						end
 					end
 				end
-					
-					for i=1, #v.Helicopters, 1 do
+
+				for i=1, #v.Helicopters, 1 do
 					local distance = #(playerCoords - v.Helicopters[i].Spawner)
 
 					if distance < Config.DrawDistance then
-						DrawMarker(34, v.Helicopters[i].Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
+						DrawMarker(Config.MarkerType.Helicopters, v.Helicopters[i].Spawner, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, true, false, false, false)
 						letSleep = false
 
 						if distance < Config.MarkerSize.x then
@@ -1430,7 +1430,7 @@ Citizen.CreateThread(function()
 					else
 						ESX.ShowNotification(_U('service_not'))
 					end
-				elseif CurrentAction == 'Helicopters' then
+				elseif CurrentAction == 'menu_helicopter_spawner' then
 					if not Config.EnableESXService then
 						OpenVehicleSpawnerMenu('helicopter', CurrentActionData.station, CurrentActionData.part, CurrentActionData.partNum)
 					elseif playerInService then
