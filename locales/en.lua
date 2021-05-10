@@ -34,6 +34,7 @@ Locales['en'] = {
   ['vehicle_menu'] = 'vehicle',
   ['vehicle_blocked'] = 'all available spawn points are currently blocked!',
   ['garage_prompt'] = 'press ~INPUT_CONTEXT~ to access the ~y~Vehicle Actions~s~.',
+  ['helicopter_prompt'] = 'press ~INPUT_CONTEXT~ to access the ~y~Helicopter Actions~s~.',
   ['garage_title'] = 'vehicle Actions',
   ['garage_stored'] = 'stored',
   ['garage_notstored'] = 'not in garage',
