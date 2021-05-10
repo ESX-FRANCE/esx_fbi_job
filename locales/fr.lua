@@ -31,8 +31,6 @@ Locales['fr'] = {
   ['get_weapon_menu'] = 'armurerie - Retirer arme',
   ['put_weapon_menu'] = 'armurerie - Stocker arme',
   -- Vehicles
-  ['vehicle_menu'] = 'véhicule',
-  ['vehicle_blocked'] = 'tous les points de spawn sont bloqués!',
   ['garage_prompt'] = 'appuyez sur ~INPUT_CONTEXT~ pour accéder aux ~y~Actions Véhicule~s~.',
   ['helicopter_prompt'] = 'appuyez sur ~INPUT_CONTEXT~ pour accéder aux ~y~Actions de l\'hélicoptère~s~.',
   ['garage_title'] = 'actions Véhicules',
@@ -42,7 +40,7 @@ Locales['fr'] = {
   ['garage_has_stored'] = 'le véhicule a bien été rangé dans le garage',
   ['garage_has_notstored'] = 'aucun véhicule dans le garage',
   ['garage_notavailable'] = 'votre véhicule n\'est pas rangé dans le garage.',
-  ['garage_blocked'] = 'la sortie du garage est obstruée!',
+  ['garage_blocked'] = 'la sortie du garage est obstruée !',
   ['garage_empty'] = 'vous n\'avez aucun véhicule dans le garage.',
   ['garage_released'] = 'votre véhicule a été sorti.',
   ['garage_store_nearby'] = 'aucun véhicule a proximité.',
