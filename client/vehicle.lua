@@ -13,36 +13,69 @@ function OpenVehicleSpawnerMenu(type, station, part, partNum)
 	}}, function(data, menu)
 		if data.current.action == 'buy_vehicle' then
 			local shopElements = {}	
-			local shopCoords = Config.FBIStations[station][part][partNum].InsideShop	
-			local authorizedVehicles = Config.AuthorizedVehicles[type][ESX.PlayerData.job.grade_name]
+			
+			if type == 'car' then
+				local shopCoords = Config.FBIStations[station][part][partNum].InsideShop	
+				local authorizedVehicles = Config.AuthorizedVehicles[type][ESX.PlayerData.job.grade_name]
+				if authorizedVehicles then
+					if #authorizedVehicles > 0 then	
+						for k,vehicle in ipairs(authorizedVehicles) do	
+							if IsModelInCdimage(vehicle.model) then	
+								local vehicleLabel = GetLabelText(GetDisplayNameFromVehicleModel(vehicle.model))
 
-			if authorizedVehicles then
-				if #authorizedVehicles > 0 then	
-					for k,vehicle in ipairs(authorizedVehicles) do	
-						if IsModelInCdimage(vehicle.model) then	
-							local vehicleLabel = GetLabelText(GetDisplayNameFromVehicleModel(vehicle.model))
+								table.insert(shopElements, {	
+									label = ('%s - <span style="color:green;">%s</span>'):format(vehicleLabel, _U('shop_item', ESX.Math.GroupDigits(vehicle.price))),	
+									name  = vehicleLabel,	
+									model = vehicle.model,	
+									price = vehicle.price,	
+									props = vehicle.props,	
+									type  = 'car'	
+								})	
+							end	
+						end
 
-							table.insert(shopElements, {	
-								label = ('%s - <span style="color:green;">%s</span>'):format(vehicleLabel, _U('shop_item', ESX.Math.GroupDigits(vehicle.price))),	
-								name  = vehicleLabel,	
-								model = vehicle.model,	
-								price = vehicle.price,	
-								props = vehicle.props,	
-								type  = type	
-							})	
-						end	
-					end
-
-					if #shopElements > 0 then
-						OpenShopMenu(shopElements, playerCoords, shopCoords)
+						if #shopElements > 0 then
+							OpenShopMenu(shopElements, playerCoords, shopCoords)
+						else
+							ESX.ShowNotification(_U('garage_notauthorized'))
+						end
 					else
 						ESX.ShowNotification(_U('garage_notauthorized'))
 					end
-				else
-					ESX.ShowNotification(_U('garage_notauthorized'))
+				else	
+					ESX.ShowNotification(_U('garage_notauthorized'))	
 				end
-			else	
-				ESX.ShowNotification(_U('garage_notauthorized'))	
+			elseif type == 'helicopter' then
+				local shopCoords = Config.FBIStations[station][part][partNum].InsideShop	
+				local authorizedVehicles = Config.AuthorizedHelicopters[type][ESX.PlayerData.job.grade_name]
+				if authorizedVehicles then
+					if #authorizedVehicles > 0 then	
+						for k,vehicle in ipairs(authorizedVehicles) do	
+							if IsModelInCdimage(vehicle.model) then	
+								local vehicleLabel = GetLabelText(GetDisplayNameFromVehicleModel(vehicle.model))
+
+								table.insert(shopElements, {	
+									label = ('%s - <span style="color:green;">%s</span>'):format(vehicleLabel, _U('shop_item', ESX.Math.GroupDigits(vehicle.price))),	
+									name  = vehicleLabel,	
+									model = vehicle.model,	
+									price = vehicle.price,	
+									props = vehicle.props,	
+									type  = 'helicopter'	
+								})	
+							end	
+						end
+
+						if #shopElements > 0 then
+							OpenShopMenu(shopElements, playerCoords, shopCoords)
+						else
+							ESX.ShowNotification(_U('helicopter_notauthorized'))
+						end
+					else
+						ESX.ShowNotification(_U('helicopter_notauthorized'))
+					end
+				else	
+					ESX.ShowNotification(_U('helicopter_notauthorized'))	
+				end
 			end
 		elseif data.current.action == 'garage' then
 			local garage = {}
