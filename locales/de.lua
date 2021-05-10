@@ -31,11 +31,10 @@ Locales['de'] = {
   ['get_weapon_menu'] = 'Waffenkammer- Waffe',
   ['put_weapon_menu'] = 'Waffenkammer - Waffe lagern',
   -- Vehicles
-  ['helicopter_prompt'] = 'Drücke ~INPUT_CONTEXT~ um ein ~y~Hubschrauber zu spawnen~s~.',
-  ['helicopter_notauthorized'] = 'Sie sind nicht berechtigt, Hubschrauber zu kaufen',
   ['vehicle_menu'] = 'Autos',
   ['vehicle_blocked'] = 'Alle Spawnpunkte sind blockiert!',
   ['garage_prompt'] = 'Drücke ~INPUT_CONTEXT~ um ein ~y~Auto zuspawnen~s~.',
+  ['helicopter_prompt'] = 'Drücke ~INPUT_CONTEXT~ um ein ~y~Hubschrauber zu spawnen~s~.',
   ['garage_title'] = 'Fahrzeug Aktionen',
   ['garage_stored'] = 'gelagert',
   ['garage_notstored'] = 'nicht in der Garage',
