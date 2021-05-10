@@ -31,8 +31,6 @@ Locales['de'] = {
   ['get_weapon_menu'] = 'Waffenkammer- Waffe',
   ['put_weapon_menu'] = 'Waffenkammer - Waffe lagern',
   -- Vehicles
-  ['vehicle_menu'] = 'Autos',
-  ['vehicle_blocked'] = 'Alle Spawnpunkte sind blockiert!',
   ['garage_prompt'] = 'Drücke ~INPUT_CONTEXT~ um ein ~y~Auto zuspawnen~s~.',
   ['helicopter_prompt'] = 'Drücke ~INPUT_CONTEXT~ um ein ~y~Hubschrauber zu spawnen~s~.',
   ['garage_title'] = 'Fahrzeug Aktionen',
@@ -42,7 +40,7 @@ Locales['de'] = {
   ['garage_has_stored'] = 'Fahrzeug wurde gelagert',
   ['garage_has_notstored'] = 'Keine Fahrzeuge wurden gefunden',
   ['garage_notavailable'] = 'Ihr Fahrzeug steht nicht in der Garage.',
-  ['garage_blocked'] = 'Kein Spawnpunkt verfügbar!',
+  ['garage_blocked'] = 'Kein Spawnpunkt verfügbar !',
   ['garage_empty'] = 'Sie haben keine Fahrzeuge in ihrer Garage.',
   ['garage_released'] = 'Das Fahrzeug steht vor der Garage.',
   ['garage_store_nearby'] = 'Kein Fahrzeug in der Nähe.',
