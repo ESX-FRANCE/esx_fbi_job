@@ -197,7 +197,7 @@ function GetAvailableVehicleSpawnPoint(station, part, partNum)
 	if found then
 		return true, foundSpawnPoint
 	else
-		ESX.ShowNotification(_U('vehicle_blocked'))
+		ESX.ShowNotification(_U('garage_blocked'))
 		return false
 	end
 end
