@@ -423,24 +423,12 @@ ESX.RegisterServerCallback('esx_fbi_job:storeNearbyVehicle', function(source, cb
 end)
 
 function getPriceFromHash(vehicleHash, jobGrade, type)
-	
-	if type == 'car' then
-		local vehicles = Config.AuthorizedVehicles[type][jobGrade]
+	local vehicles = Config.AuthorizedVehicles[type][jobGrade]
 
-		for k,v in ipairs(vehicles) do
-			if GetHashKey(v.model) == vehicleHash then
-				return v.price
-			end
+	for k,v in ipairs(vehicles) do
+		if GetHashKey(v.model) == vehicleHash then
+			return v.price
 		end
-	elseif type == 'helicopter' then
-		local vehicles = Config.AuthorizedHelicopters[type][jobGrade]
-
-		for k,v in ipairs(vehicles) do
-			if GetHashKey(v.model) == vehicleHash then
-				return v.price
-			end
-		end
-
 	end
 
 	return 0
