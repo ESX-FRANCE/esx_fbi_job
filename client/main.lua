@@ -281,7 +281,7 @@ function OpenFBIActionsMenu()
 				align = 'top-left',
 				elements = elements
 			}, function(data2, menu2)
-				local coords  = GetEntityCoords(playerPed)
+				local coords = GetEntityCoords(playerPed)
 				vehicle = ESX.Game.GetVehicleInDirection()
 				action = data2.current.value
 				
@@ -1002,7 +1002,6 @@ AddEventHandler('esx_fbi_job:hasEnteredEntityZone', function(entity)
 
 	if GetEntityModel(entity) == GetHashKey('p_ld_stinger_s') then
 		local playerPed = PlayerPedId()
-		local coords = GetEntityCoords(playerPed)
 
 		if IsPedInAnyVehicle(playerPed, false) then
 			local vehicle = GetVehiclePedIsIn(playerPed)
